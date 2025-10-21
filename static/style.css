@@ -15,7 +15,8 @@ h1 {
     border: 1px solid #DDD;
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 8px;
+   border-radius: 8px;
+    overflow: auto;
 }
 
 .post h2 {
@@ -26,10 +27,67 @@ h1 {
     margin: 10px 0;
 }
 
+
+.post-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.post-form input[type="text"],
+.post-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.post-form button {
+    background-color: #4F4F4F;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.post-actions {
+    float: right;
+    margin-left: 20px;
+    text-align: right;
+    margin-bottom: 15px;
+}
+
 .add-link {
     display: block;
     margin-bottom: 20px;
     font-weight: bold;
     color: #4F4F4F;
-    text-decoration: none; /* Optional: Unterstreichung entfernen */
-}
+    text-decoration: none;
+
+    .action-link {
+        display: inline-block;
+        padding: 5px 12px;
+        margin-top: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 20px;
+        color: white !important;
+    }
+
+    .action-link:hover {
+        opacity: 0.8;
+    }
+
+    .edit-link {
+        background-color: #007bff; /* Helles Blau für Update */
+        border: 1px solid #007bff;
+    }
+
+    .delete-link {
+        background-color: #dc3545; /* Rot für Delete/Gefahr */
+        border: 1px solid #dc3545;
+    }
